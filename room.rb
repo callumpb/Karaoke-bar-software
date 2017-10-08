@@ -32,5 +32,4 @@ class Room
     @songs.push(new_song)
   end
 
-
 end

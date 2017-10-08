@@ -38,7 +38,6 @@ class TestRoom < MiniTest::Test
     assert_equal(0, actual)
   end
 
-
   def test_room_starts_with_zero_songs
     actual = @room_1.number_of_songs
     assert_equal(0, actual)
@@ -49,7 +48,5 @@ class TestRoom < MiniTest::Test
      actual = @room_1.number_of_songs
      assert_equal(1, actual)
   end
-
-
 
 end
