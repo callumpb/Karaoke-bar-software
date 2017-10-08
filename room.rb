@@ -20,5 +20,9 @@ class Room
     return @songs.length
   end
 
+  def add_song(new_song)
+    @songs.push(new_song)
+  end
+
 
 end
