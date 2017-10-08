@@ -11,7 +11,7 @@ class Room
     return @name
   end
 
-  def room_starts_with_zero_guests
+  def number_of_guests
     return @guests.length
   end
 
