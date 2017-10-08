@@ -5,6 +5,7 @@ class Room
   def initialize(name)
     @name = name
     @guests = []
+    @songs = []
   end
 
   def room_has_name
@@ -13,6 +14,10 @@ class Room
 
   def number_of_guests
     return @guests.length
+  end
+
+  def number_of_songs
+    return @songs.length
   end
 
 
