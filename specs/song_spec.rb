@@ -13,5 +13,10 @@ class TestSong < MiniTest::Test
     assert_equal("Luis Fonsi", actual)
   end
 
+  def test_song_has_title
+    actual = @song.title
+    assert_equal("Despacito", actual)
+  end
+
 
 end
