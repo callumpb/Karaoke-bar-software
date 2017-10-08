@@ -26,11 +26,14 @@ class TestRoom < MiniTest::Test
     assert_equal(0, actual)
   end
 
-  def test_room_can_add_guests
-    @room_1.add_guest(@guest_1)
+  def test_guest_check_in
+    @room_1.check_in(@guest_1)
     actual = @room_1.number_of_guests
     assert_equal(1, actual)
   end
+
+  #def test_guest_check_out
+
 
   def test_room_starts_with_zero_songs
     actual = @room_1.number_of_songs
