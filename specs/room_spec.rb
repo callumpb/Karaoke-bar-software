@@ -2,6 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../room.rb")
 require_relative("../song.rb")
+require_relative("../guest.rb")
 
 class TestRoom < MiniTest::Test
 
@@ -11,6 +12,8 @@ class TestRoom < MiniTest::Test
     @song_1 = Song.new("Despacito", "Luis Fonsi")
     @song_2 = Song.new("PIKOTARO", "PPAP")
     @song_3 = Song.new("Justin Beiber", "Baby")
+    @guest_1 = Guest.new("Margaret")
+    @guest_2 = Guest.new("Callum")
   end
 
   def test_room_has_name
@@ -23,7 +26,11 @@ class TestRoom < MiniTest::Test
     assert_equal(0, actual)
   end
 
-
+  def test_room_can_add_guests
+    @room_1.add_guest(@guest_1)
+    actual = @room_1.number_of_guests
+    assert_equal(1, actual)
+  end
 
   def test_room_starts_with_zero_songs
     actual = @room_1.number_of_songs
@@ -36,6 +43,6 @@ class TestRoom < MiniTest::Test
      assert_equal(1, actual)
   end
 
-  
+
 
 end
