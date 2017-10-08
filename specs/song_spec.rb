@@ -8,5 +8,10 @@ class TestSong < MiniTest::Test
   end
 
 
-  
+  def test_song_has_artist_name
+    actual = @song.artist
+    assert_equal("Luis Fonsi", actual)
+  end
+
+
 end
